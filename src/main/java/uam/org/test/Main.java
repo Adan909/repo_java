@@ -6,7 +6,10 @@ import uam.org.servicio.ServicioEstudiante;
 public class Main {
 
     public static void main(String[] args) {
-        Estudiante estudiante = ServicioEstudiante.insertarEstudiante("Jorge", "Ortega", "jorgeot@uamv.edu.ni", "24013449");
-        System.out.println(estudiante);
+        Estudiante estudiante = new Estudiante("24013449", "Jorge", "Ortega", "jorgeot@uamv.edu.ni");
+        ServicioEstudiante.insertarEstudiante(estudiante);
+        Estudiante estudiante1 = new Estudiante("37287320", "Pepe", "Perico", "pp@uamv.edu.ni");
+        ServicioEstudiante.insertarEstudiante(estudiante1);
+        ServicioEstudiante.listarEstudiantes();
     }
 }

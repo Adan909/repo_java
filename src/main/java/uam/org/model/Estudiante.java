@@ -1,5 +1,7 @@
 package uam.org.model;
 
+import java.util.Objects;
+
 public class Estudiante {
     private String cif;
     private String nombre;
@@ -47,4 +49,24 @@ public class Estudiante {
     public void setCorreo(String correo) {
         this.correo = correo;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Estudiante that)) return false;
+        return Objects.equals(cif, that.cif);
+    }
+
+
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "Estudiante{" +
+                "cif='" + cif + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", correo='" + correo + '\'' +
+                '}';
+
+
+    }
+
 }
