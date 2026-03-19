@@ -3,7 +3,7 @@ package uam.org.servicio;
 import uam.org.config.Global;
 import uam.org.model.Estudiante;
 
-public class ServicioEstudiante {
+public class ServicioEstudianteDB {
     public static Estudiante insertarEstudiante(Estudiante estudiante)
     {
         Global.listaEstudiante.add(estudiante);

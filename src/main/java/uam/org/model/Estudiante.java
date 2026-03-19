@@ -7,15 +7,18 @@ public class Estudiante {
     private String nombre;
     private String apellido;
     private String correo;
+    private Double promedio;
 
     public Estudiante() {
     }
 
-    public Estudiante(String cif, String nombre, String apellido, String correo) {
+    public Estudiante(String cif, String nombre, String apellido, String correo, Double promedio) {
         this.cif = cif;
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
+        this.promedio = promedio;
+
     }
 
     public String getCif() {
@@ -50,6 +53,14 @@ public class Estudiante {
         this.correo = correo;
     }
 
+    public Double getPromedio() {
+        return promedio;
+    }
+
+    public void setPromedio(Double promedio) {
+        this.promedio = promedio;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (!(o instanceof Estudiante that)) return false;
@@ -57,16 +68,16 @@ public class Estudiante {
     }
 
 
-    @java.lang.Override
-    public java.lang.String toString() {
+    @Override
+    public String toString() {
         return "Estudiante{" +
                 "cif='" + cif + '\'' +
                 ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
                 ", correo='" + correo + '\'' +
+                ", promedio=" + promedio +
                 '}';
-
-
     }
-
 }
+
+
