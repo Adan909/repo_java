@@ -1,6 +1,7 @@
 package uam.org.test;
 
 import uam.org.model.Estudiante;
+import uam.org.model.EstudianteBecado;
 import uam.org.servicio.ClaseBecaA;
 import uam.org.servicio.ClaseBecaB;
 import uam.org.servicio.ServicioEstudiante;
@@ -15,14 +16,16 @@ public class Main {
         ServicioEstudianteDB.insertarEstudiante(estudiante1);
         ServicioEstudianteDB.listarEstudiantes();
         calcularBeca(estudiante);
+        EstudianteBecado becado = (EstudianteBecado) new Estudiante();
+        becado.calcularBeca();
     }
 
     public static void calcularBeca(Estudiante estudiante) {
        if(estudiante.getPromedio() >= 90){
-           System.out.println("Su beca es" + ServicioEstudiante.calcularBeca(new ClaseBecaA(), estudiante ) * 100 + "%");
+           System.out.println("Su beca es " + ServicioEstudiante.calcularBeca(new ClaseBecaA(), estudiante ) * 100 + "%");
        }
        if (estudiante.getPromedio() >= 80){
-           System.out.println("Su beca es" + ServicioEstudiante.calcularBeca(new ClaseBecaB(), estudiante) * 100 + "%");
+           System.out.println("Su beca es " + ServicioEstudiante.calcularBeca(new ClaseBecaB(), estudiante) * 100 + "%");
        }
     }
 }

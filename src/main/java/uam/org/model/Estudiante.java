@@ -1,13 +1,15 @@
 package uam.org.model;
 
+import uam.org.servicio.InterfaceEstrategiaBeca;
+
 import java.util.Objects;
 
-public class Estudiante {
+abstract class Estudiante {
     private String cif;
     private String nombre;
     private String apellido;
     private String correo;
-    private Double promedio;
+    protected Double promedio;
 
     public Estudiante() {
     }
@@ -19,6 +21,9 @@ public class Estudiante {
         this.correo = correo;
         this.promedio = promedio;
 
+    }
+
+    public Estudiante(double promedio) {
     }
 
     public String getCif() {
@@ -78,6 +83,12 @@ public class Estudiante {
                 ", promedio=" + promedio +
                 '}';
     }
+    public abstract double calcularBeca();
+
+    
+
+
+
 }
 
 
