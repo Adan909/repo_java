@@ -10,14 +10,16 @@ import uam.org.servicio.ServicioEstudianteDB;
 public class Main {
 
     public static void main(String[] args) {
-        Estudiante estudiante = new Estudiante("24013449", "Jorge", "Ortega", "jorgeot@uamv.edu.ni", 90.00);
+        Estudiante estudiante = new EstudianteBecado("24013449", "Jorge", "Ortega", "jorgeot@uamv.edu.ni", 90.00);
+        Double beca = estudiante.calcularBeca();
+        /*Estudiante estudiante = new Estudiante("24013449", "Jorge", "Ortega", "jorgeot@uamv.edu.ni", 90.00);
         ServicioEstudianteDB.insertarEstudiante(estudiante);
         Estudiante estudiante1 = new Estudiante("37287320", "Pepe", "Perico", "pp@uamv.edu.ni", 80.00);
         ServicioEstudianteDB.insertarEstudiante(estudiante1);
         ServicioEstudianteDB.listarEstudiantes();
         calcularBeca(estudiante);
         EstudianteBecado becado = (EstudianteBecado) new Estudiante();
-        becado.calcularBeca();
+        becado.calcularBeca();*/
     }
 
     public static void calcularBeca(Estudiante estudiante) {

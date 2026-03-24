@@ -4,7 +4,7 @@ import uam.org.servicio.InterfaceEstrategiaBeca;
 
 import java.util.Objects;
 
-abstract class Estudiante {
+public abstract class Estudiante {
     private String cif;
     private String nombre;
     private String apellido;
@@ -85,7 +85,7 @@ abstract class Estudiante {
     }
     public abstract double calcularBeca();
 
-    
+
 
 
 

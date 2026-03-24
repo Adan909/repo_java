@@ -1,15 +1,20 @@
 package uam.org.model;
 
 public class EstudianteBecado extends Estudiante{
-    private double promedio;
+
     public EstudianteBecado(double promedio){
         super(promedio);
 
     }
 
-    public void calcularBeca1(){
-        this.promedio = super.promedio*0.1;
-
+    public EstudianteBecado(String cif, String nombre, String apellido, String correo, Double promedio) {
+        super(cif, nombre, apellido, correo, promedio);
     }
+
+    @Override
+    public double calcularBeca() {
+        return 0.5;
+    }
+
 
 }
