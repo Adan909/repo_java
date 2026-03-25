@@ -18,7 +18,7 @@ public class ServicioEstudianteDB implements IEstudianteServiceDB {
 
     @Override
     public Estudiante obtenerEstudiante(Estudiante e) {
-        return Global.listaEstudiante.stream().filter(x-> x.getCif().equals(x.getCif())).findFirst().orElse(null));
+        return Global.listaEstudiante.stream().filter(x-> x.getCif().equals(x.getCif())).findFirst().orElse(null);
     }
 
     @Override
