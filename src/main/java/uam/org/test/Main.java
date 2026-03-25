@@ -19,9 +19,9 @@ public class Main {
         Estudiante estudianteRe = new EstudianteRe("24013449", "Jorge", "Ortega", "jorgeot@uamv.edu.ni", 90.00);
         Double becaRe = estudianteRe.calcularBeca();
 
-        System.out.println("Beca becado: " + becaBecado);
-        System.out.println("Beca Ex: " + becaEx);
-        System.out.println("Beca Re: " + becaRe);
+        System.out.println("Beca becado: " + becaBecado + "%");
+        System.out.println("Beca Ex: " + becaEx + "%");
+        System.out.println("Beca Re: " + becaRe + "%");
 
 
     }

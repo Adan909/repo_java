@@ -13,7 +13,7 @@ public class EstudianteRe extends Estudiante{
 
     @Override
     public double calcularBeca() {
-        return 0.3;
+        return 0.3 * 100;
     }
 
 
